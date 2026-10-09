@@ -1,5 +1,13 @@
 # Combine-Report
 
+## Report Builder V24 — 9 October 2026
+
+Download [Report-Builder_V_24.html](https://raw.githubusercontent.com/mixkung2540-ctrl/Combine-Report/main/Report-Builder_V_24.html).
+
+Use the up/down arrow buttons beside each file to reorder it within its category. The table of contents and merged report follow the selected order, which is also saved in drafts. All V23 improvements are retained.
+
+V22/V23 users: click the update button to download V24. Back up important drafts before replacing files.
+
 ## Report Builder V23 — 9 October 2026
 
 Download [Report-Builder_V_23.html](https://raw.githubusercontent.com/mixkung2540-ctrl/Combine-Report/main/Report-Builder_V_23.html) and open it in your browser.
