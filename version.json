@@ -1,5 +1,5 @@
 {
-  "version": 22,
-  "file": "Report-Builder_V_22.html",
-  "notes": "เพิ่มปุ่มตรวจสอบและดาวน์โหลดอัปเดตจาก GitHub"
+  "version": 23,
+  "file": "Report-Builder_V_23.html",
+  "notes": "V23: เลือก AC/PE Endorsement, แก้หัวข้อหลุดกรอบ, ลดหัวข้อย่อยหมวดไฟล์เดียว, เลขหน้ากึ่งกลาง, Arial และโลโก้บริษัทที่หัวสารบัญ"
 }
