@@ -1,5 +1,13 @@
 # Combine-Report
 
+## Report Builder V25 — 9 October 2026
+
+Download [Report-Builder_V_25.html](https://raw.githubusercontent.com/mixkung2540-ctrl/Combine-Report/main/Report-Builder_V_25.html).
+
+Report order is now Cover → Contents → Endorsement → Report content. Contents page numbers reflect this order. The final endorsement and all V24 features are retained.
+
+Existing users: click the update button to download V25. Back up important drafts before replacing files.
+
 ## Report Builder V24 — 9 October 2026
 
 Download [Report-Builder_V_24.html](https://raw.githubusercontent.com/mixkung2540-ctrl/Combine-Report/main/Report-Builder_V_24.html).
