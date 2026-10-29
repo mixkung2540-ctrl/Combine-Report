@@ -1,5 +1,16 @@
 # Combine-Report
 
+## Report Builder V25.2 — 29 October 2026
+
+[Download V25.2 ZIP](https://github.com/mixkung2540-ctrl/Combine-Report/raw/refs/heads/main/Report-Builder_V_25.2.zip)
+
+Extract the ZIP and open Report-Builder_V_25.2.html locally in Edge or Chrome. GitHub Raw HTML links display source code; use the ZIP for the first installation.
+
+The updater supports major/minor/patch versions and compares each part (25.10 is newer than 25.2). Click Update โปรแกรม, then ดาวน์โหลด Vxx to save the new HTML file. V25.2 retains all V25 functions and V25.1 cover formatting fixes.
+
+Users with the original V25 or earlier updater must install this version from the ZIP once. The original updater accepts integer-only manifests.
+
+
 ## Report Builder V25 — 9 October 2026
 
 Download [Report-Builder_V_25.html](https://raw.githubusercontent.com/mixkung2540-ctrl/Combine-Report/main/Report-Builder_V_25.html).
