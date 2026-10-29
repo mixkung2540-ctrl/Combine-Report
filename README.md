@@ -1,5 +1,14 @@
 # Combine-Report
 
+## Report Builder V25.3 — 29 October 2026
+
+[Download V25.3 ZIP](https://github.com/mixkung2540-ctrl/Combine-Report/raw/refs/heads/main/Report-Builder_V_25.3.zip)
+
+Fixes Generate Report failing with an atob decoding error. Embedded fonts were corrupted by a version-string replacement; the font and logo assets are restored exactly from V25. All V25 functions, cover formatting and decimal-version updates are retained.
+
+Validated by running the full report generator with source PDFs: a six-page PDF was generated successfully and its cover was rendered and inspected. V25.1/V25.2 users can click Update โปรแกรม and download V25.3.
+
+
 ## Report Builder V25.2 — 29 October 2026
 
 [Download V25.2 ZIP](https://github.com/mixkung2540-ctrl/Combine-Report/raw/refs/heads/main/Report-Builder_V_25.2.zip)

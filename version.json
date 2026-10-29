@@ -1,5 +1,5 @@
 {
-  "version": "25.2",
-  "file": "Report-Builder_V_25.2.html",
-  "notes": "รองรับเวอร์ชันย่อยและดาวน์โหลดเป็นไฟล์ HTML; คงฟังก์ชัน V25 และรูปแบบปก V25.1"
+  "version": "25.3",
+  "file": "Report-Builder_V_25.3.html",
+  "notes": "ซ่อมข้อมูลฟอนต์ฝังที่เสียหายจน Generate Report ไม่ได้ คงฟังก์ชันและรูปแบบเดิม"
 }
