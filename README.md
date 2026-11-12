@@ -1,5 +1,12 @@
 # Combine-Report
 
+## Report Builder V25.4 — 12 November 2026
+
+[Download V25.4 ZIP](https://github.com/mixkung2540-ctrl/Combine-Report/raw/refs/heads/main/Report-Builder_V_25.4.zip)
+
+The cover title frame expands to fit the entered lines, up to the width of the project description frame above it. Titles only wrap when they reach that limit. The two-line example and longer titles were verified by generating actual PDFs. Users of V25.1 and later can use Update โปรแกรม to download V25.4.
+
+
 ## Report Builder V25.3 — 29 October 2026
 
 [Download V25.3 ZIP](https://github.com/mixkung2540-ctrl/Combine-Report/raw/refs/heads/main/Report-Builder_V_25.3.zip)

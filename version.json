@@ -1,5 +1,5 @@
 {
-  "version": "25.3",
-  "file": "Report-Builder_V_25.3.html",
-  "notes": "ซ่อมข้อมูลฟอนต์ฝังที่เสียหายจน Generate Report ไม่ได้ คงฟังก์ชันและรูปแบบเดิม"
+  "version": "25.4",
+  "file": "Report-Builder_V_25.4.html",
+  "notes": "กรอบ Report Title ขยายตามข้อความได้ถึงขอบกรอบรายละเอียดโครงการ แล้วจึงตัดบรรทัดเพิ่ม"
 }
