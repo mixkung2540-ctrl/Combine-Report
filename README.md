@@ -1,5 +1,16 @@
 # Combine-Report
 
+## Report Builder V26.0 — 12 November 2026
+
+[Download V26.0 ZIP](https://github.com/mixkung2540-ctrl/Combine-Report/raw/refs/heads/main/Report-Builder_V_26.0.zip)
+
+- File covers and table of contents entries use the editable title shown above the original filename. Edit that title to omit sorting prefixes such as `5.`.
+- Select **UK · English** or **TH · ไทย** in the header to switch the interface language. The selection is remembered; report content is unchanged by the interface language.
+- Verified language switching and PDF generation in Edge, including the edited title on both the divider and the table of contents.
+
+Use **Update โปรแกรม** in the previous version, or extract the ZIP and open the HTML locally.
+
+
 ## Report Builder V25.4 — 12 November 2026
 
 [Download V25.4 ZIP](https://github.com/mixkung2540-ctrl/Combine-Report/raw/refs/heads/main/Report-Builder_V_25.4.zip)
