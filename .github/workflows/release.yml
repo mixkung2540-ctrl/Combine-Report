@@ -2,6 +2,9 @@ name: Publish Report Builder release
 on:
   push:
     tags: ['v*']
+    branches: [main]
+    paths: ['.github/workflows/release.yml']
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -18,11 +21,13 @@ jobs:
           import json, os, re, zipfile
           from pathlib import Path
 
-          tag = os.environ['GITHUB_REF_NAME']
+          manifest = json.loads(Path('version.json').read_text(encoding='utf-8'))
+          tag = os.environ['GITHUB_REF_NAME'] if os.environ['GITHUB_REF_TYPE'] == 'tag' else 'v' + str(manifest['version'])
           if not re.fullmatch(r'v[0-9]+(?:\.[0-9]+){0,2}', tag):
               raise SystemExit('Tag must be v followed by a version')
           version = tag[1:]
-          manifest = json.loads(Path('version.json').read_text(encoding='utf-8'))
+          with open(os.environ['GITHUB_ENV'], 'a', encoding='utf-8') as env:
+              env.write(f'RELEASE_TAG={tag}\n')
           html = Path(f'Report-Builder_V_{version}.html')
           archive = html.with_suffix('.zip')
           if str(manifest['version']) != version or manifest['file'] != html.name:
@@ -43,8 +48,9 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          version="${GITHUB_REF_NAME#v}"
-          gh release create "$GITHUB_REF_NAME" \
+          version="${RELEASE_TAG#v}"
+          if gh release view "$RELEASE_TAG" --json tagName >/dev/null 2>&1; then exit 0; fi
+          gh release create "$RELEASE_TAG" \
             "Report-Builder_V_${version}.zip" "Report-Builder_V_${version}.html" \
             --verify-tag --title "Report Builder V${version}" \
             --notes-file release-notes.md --latest
