@@ -1,5 +1,18 @@
 # Combine-Report
 
+## Report Builder V26.1 — 13 November 2026
+
+[Download V26.1 ZIP](https://github.com/mixkung2540-ctrl/Combine-Report/raw/refs/heads/main/Report-Builder_V_26.1.zip)
+
+### Patch Notes
+
+- เพิ่มยอดรวมหน้าก่อนกด **Generate Report** แยกหน้าปกหลัก สารบัญ ไฟล์ต้นฉบับ ปกหมวด ปกไฟล์ และ Endorsement ที่ซ้ำท้ายเล่ม ยอดอัปเดตเมื่อเปลี่ยนตัวเลือกปก
+- สารบัญเริ่มที่ **1.0 Endorsement** โดยไม่แสดงรายการ Cover Page และ Content Page ทั้งสองส่วนยังอยู่ใน PDF และนับในเลขหน้าอ้างอิง
+- ทดสอบเปิดและปิดตัวเลือกปกแล้ว ยอดก่อนสร้างตรงกับจำนวนหน้า PDF ที่สร้างจริง
+
+กด **Update Program / อัปเดตโปรแกรม** ในเวอร์ชันก่อนหน้า หรือแตกไฟล์ ZIP แล้วเปิดไฟล์ HTML
+
+
 ## Report Builder V26.0 — 12 November 2026
 
 [Download V26.0 ZIP](https://github.com/mixkung2540-ctrl/Combine-Report/raw/refs/heads/main/Report-Builder_V_26.0.zip)

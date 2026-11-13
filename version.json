@@ -1,5 +1,5 @@
 {
-  "version": "26.0",
-  "file": "Report-Builder_V_26.0.html",
-  "notes": "File covers use edited titles. UK / TH menu language selection."
+  "version": "26.1",
+  "file": "Report-Builder_V_26.1.html",
+  "notes": "Live total page count before generating, including optional covers. Contents starts at Endorsement."
 }
