@@ -32,8 +32,11 @@ jobs:
           archive = html.with_suffix('.zip')
           if str(manifest['version']) != version or manifest['file'] != html.name:
               raise SystemExit('Release tag does not match version.json')
+          # Git can normalize HTML line endings independently of the ZIP.
+          def normalize(data):
+              return data.replace(b'\r\n', b'\n')
           with zipfile.ZipFile(archive) as z:
-              if z.namelist() != [html.name] or z.read(html.name) != html.read_bytes():
+              if z.namelist() != [html.name] or normalize(z.read(html.name)) != normalize(html.read_bytes()):
                   raise SystemExit('ZIP does not match the program HTML')
           readme = Path('README.md').read_text(encoding='utf-8')
           heading = rf'^## Report Builder V{re.escape(version)}(?:\s+—[^\n]*)?$'
