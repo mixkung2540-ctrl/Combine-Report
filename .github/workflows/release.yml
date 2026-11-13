@@ -1,0 +1,50 @@
+name: Publish Report Builder release
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify artifacts and prepare patch notes
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import json, os, re, zipfile
+          from pathlib import Path
+
+          tag = os.environ['GITHUB_REF_NAME']
+          if not re.fullmatch(r'v[0-9]+(?:\.[0-9]+){0,2}', tag):
+              raise SystemExit('Tag must be v followed by a version')
+          version = tag[1:]
+          manifest = json.loads(Path('version.json').read_text(encoding='utf-8'))
+          html = Path(f'Report-Builder_V_{version}.html')
+          archive = html.with_suffix('.zip')
+          if str(manifest['version']) != version or manifest['file'] != html.name:
+              raise SystemExit('Release tag does not match version.json')
+          with zipfile.ZipFile(archive) as z:
+              if z.namelist() != [html.name] or z.read(html.name) != html.read_bytes():
+                  raise SystemExit('ZIP does not match the program HTML')
+          readme = Path('README.md').read_text(encoding='utf-8')
+          heading = rf'^## Report Builder V{re.escape(version)}(?:\s+—[^\n]*)?$'
+          match = re.search(heading + r'\n([\s\S]*?)(?=^## |\Z)', readme, re.MULTILINE)
+          if not match or '### Patch Notes' not in match[1]:
+              raise SystemExit('Add Patch Notes to the matching README section')
+          notes = match[1].split('### Patch Notes', 1)[1].strip()
+          Path('release-notes.md').write_text(notes + '\n', encoding='utf-8')
+          PY
+      - name: Publish release and downloads
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          version="${GITHUB_REF_NAME#v}"
+          gh release create "$GITHUB_REF_NAME" \
+            "Report-Builder_V_${version}.zip" "Report-Builder_V_${version}.html" \
+            --verify-tag --title "Report Builder V${version}" \
+            --notes-file release-notes.md --latest
